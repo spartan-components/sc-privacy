@@ -58,8 +58,7 @@ Note:
 ### &lt;sc-privacy-widget&gt;
 
 ```html
-<sc-privacy-widget
-  data-key="googleMapsCookiesAccepted">
+<sc-privacy-widget data-key="googleMapsCookiesAccepted">
 
   <div data-fallback>
     <p>JavaScript is required to load Google Maps.</p>
