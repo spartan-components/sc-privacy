@@ -4,7 +4,7 @@
   "description": "A collection of web components to aks for user permission before loading third party code.",
   "main": "index.js",
   "scripts": {
-    "dev": "web-dev-server --open demo"
+    "dev": "web-dev-server --open demo --watch"
   },
   "repository": {
     "type": "git",
