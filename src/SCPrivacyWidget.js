@@ -6,10 +6,10 @@ class SCPrivacyWidget extends HTMLElement {
     this.key = this.dataset.key;
 
     // get references and placeholder references
-    this.buttonAccept = null;
-    this.fallback = this.querySelector('.fallback');
-    this.tmplDisclaimer = this.querySelector(`template#${this.id}-disclaimer`);
-    this.tmplWidget = this.querySelector(`template#${this.id}-widget`);
+    this.buttonOk = null;
+    this.fallback = this.querySelector('[data-fallback]');
+    this.tmplDisclaimer = this.querySelector(`template[data-disclaimer]`);
+    this.tmplWidget = this.querySelector(`template[data-widget]`);
 
     this.setupHtml();
 
@@ -18,7 +18,7 @@ class SCPrivacyWidget extends HTMLElement {
   }
 
   handleEvent(event) {
-    if(event.target === this.buttonAccept) {
+    if(event.target === this.buttonOk) {
       this.acceptCookies();
     }
 
@@ -48,7 +48,7 @@ class SCPrivacyWidget extends HTMLElement {
     this.insertAdjacentHTML('afterbegin', this.tmplDisclaimer.innerHTML);
 
     // update reference
-    this.buttonAccept = this.querySelector(`button#${this.id}-accept`);
+    this.buttonOk = this.querySelector(`button[data-ok]`);
 
     // setup event listener
     this.addEventListener('click', this);

@@ -8,7 +8,7 @@ class SCPrivacyModal extends HTMLElement {
     // setup references and placeholder references
     this.buttonOk = null;
     this.buttonDismiss = null;
-    this.tmplDisclaimer = this.querySelector(`template#${this.id}-disclaimer`);
+    this.tmplDisclaimer = this.querySelector(`template`);
 
     this.setupHtml();
   }
@@ -37,8 +37,8 @@ class SCPrivacyModal extends HTMLElement {
     this.innerHTML = this.tmplDisclaimer.innerHTML;
 
     // update references
-    this.buttonOk = this.querySelector(`button#${this.id}-ok`);
-    this.buttonDismiss = this.querySelector(`button#${this.id}-dismiss`);
+    this.buttonOk = this.querySelector(`button[data-ok]`);
+    this.buttonDismiss = this.querySelector(`button[data-dismiss]`);
 
     // add event click listeners
     this.addEventListener('click', this);
