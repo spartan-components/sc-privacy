@@ -9,10 +9,12 @@
 
   <sc-privacy-modal
     id="scpm"
-    keys="googleMapsCookiesAccepted">
+    data-keys="googleMapsCookiesAccepted">
     <template id="scpm-disclaimer">
-      This website uses third party tools that can set cookies and might
-      collect usage data.
+      <p>
+        This website uses third party tools that can set cookies and might
+        collect usage data.
+      </p>
       <button id="scpm-ok">OK</button>
       <button id="scpm-dismiss">Dismiss</button>
     </template>
@@ -20,7 +22,7 @@
 
   <sc-privacy-widget
     id="scpw"
-    key="googleMapsCookiesAccepted">
+    data-key="googleMapsCookiesAccepted">
 
     <p>JavaScript is required to load Google Maps.</p>
 
