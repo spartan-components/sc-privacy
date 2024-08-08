@@ -1,0 +1,28 @@
+{
+  "name": "@spartan-components/sp-privacy",
+  "version": "0.0.0",
+  "description": "A collection of web components to aks for user permission before loading third party code.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "web-dev-server --open demo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spartan-components/sp-privacy.git"
+  },
+  "keywords": [
+    "Web",
+    "components",
+    "cookie",
+    "banner"
+  ],
+  "author": "Spartan Components",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spartan-components/sp-privacy/issues"
+  },
+  "homepage": "https://github.com/spartan-components/sp-privacy#readme",
+  "devDependencies": {
+    "@web/dev-server": "^0.4.6"
+  }
+}

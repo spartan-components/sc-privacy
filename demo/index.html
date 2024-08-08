@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Spartan Components - Privacy</title>
+</head>
+<body>
+
+  <sc-privacy-modal
+    id="scpm"
+    keys="googleMapsCookiesAccepted">
+    <template id="scpm-disclaimer">
+      This website uses third party tools that can set cookies and might
+      collect usage data.
+      <button id="scpm-ok">OK</button>
+      <button id="scpm-dismiss">Dismiss</button>
+    </template>
+  </sc-privacy-modal>
+
+  <sc-privacy-widget
+    id="scpw"
+    key="googleMapsCookiesAccepted">
+
+    <p>JavaScript is required to load Google Maps.</p>
+
+    <template id="scpw-disclaimer">
+      <p><b>Google Maps</b></p>
+      <p>To load Google Maps you must accept
+        <a href="https://policies.google.com/privacy?hl=en-US">
+          Googles Privacy Policy
+        </a>.
+      </p>
+      <button id="scpw-accept">Accept</button>
+    </template>
+
+    <template id="scpw-widget">
+      <iframe
+        width="380"
+        height="300"
+        class="maps-embed"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+        src="https://maps.google.com/maps?q=Googleplex&z=18&output=embed">
+      </iframe>
+    </template>
+  </sc-privacy-widget>
+
+  <script type="module">import "../sc-privacy-modal.js";</script>
+  <script type="module">import "../sc-privacy-widget.js";</script>
+
+</body>
+</html>
