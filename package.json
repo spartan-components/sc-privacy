@@ -1,6 +1,6 @@
 {
   "name": "@spartan-components/sc-privacy",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A collection of web components to aks for user permission before loading third party code.",
   "main": "index.js",
   "scripts": {
