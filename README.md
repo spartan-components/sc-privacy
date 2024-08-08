@@ -1,4 +1,4 @@
-# <sc-privacy-modal> & <sc-privacy-widget> elements
+# &lt;sc-privacy-modalgt; & lt;sc-privacy-widgetgt; elements
 
 Two custom elements to ask for user permission before loading third party code like Social Media feeds or maps embeds.
 
