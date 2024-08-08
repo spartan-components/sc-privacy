@@ -32,7 +32,7 @@ Include with a script tag:
 <script type="module" src="./node_modules/@spartan-components/sc-privacy-widget.js">
 ```
 
-### <sc-privacy-modal>
+### &lt;sc-privacy-modal&gt;
 
 ```html
 <sc-privacy-modal
@@ -55,7 +55,7 @@ Note:
   - `<button data-ok>`
   - `<button data-dismiss>`
 
-### <sc-privacy-widget>
+### &lt;sc-privacy-widget&gt;
 
 ```html
 <sc-privacy-widget
