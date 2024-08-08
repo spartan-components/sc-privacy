@@ -19,19 +19,16 @@ class SCPrivacyModal extends HTMLElement {
   }
 
   setupHtml() {
-    // check if all cookies are accepted
-    const allAccepted = this.keys.every(key => {
-      return localStorage.getItem(key) === "true";
-    });
-
-    // check if all cookies are rejected
-    const allRejected = this.keys.every(key => {
-      return localStorage.getItem(key) === "false";
+    // check if all theres a value for each key
+    // doesn't matter if true or false, we're only interested,
+    // if the user has made a choice for all providers
+    const allInStorage = this.keys.every(key => {
+      return localStorage.getItem(key);
     });
 
     // if all cookies are either accepted or rejected,
     // then there's nothing to do
-    if(allAccepted || allRejected) return;
+    if(allInStorage) return;
 
     // otherwise, render the disclaimer
     this.innerHTML = this.tmplDisclaimer.innerHTML;
