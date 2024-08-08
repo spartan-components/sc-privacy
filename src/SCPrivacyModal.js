@@ -6,9 +6,9 @@ class SCPrivacyModal extends HTMLElement {
     this.keys = this.dataset.keys.split(" ");
 
     // setup references and placeholder references
-    this.tmplDisclaimer = this.querySelector(`template#${this.id}-disclaimer`);
     this.buttonOk = null;
     this.buttonDismiss = null;
+    this.tmplDisclaimer = this.querySelector(`template#${this.id}-disclaimer`);
 
     this.setupHtml();
   }
@@ -51,7 +51,7 @@ class SCPrivacyModal extends HTMLElement {
    * @returns {null}
    */
   emit(type, detail = {}) {
-    let event = new CustomEvent(`${this.id}:${type}`, {
+    let event = new CustomEvent(`scpm:${type}`, {
       bubbles: true,
       cancelable: true,
       detail: detail,
