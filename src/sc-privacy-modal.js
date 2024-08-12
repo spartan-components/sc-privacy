@@ -1,3 +1,3 @@
-import { SCPrivacyModal } from "./index.js";
+import { SCPrivacyModal } from "../index.js";
 
 customElements.define('sc-privacy-modal', SCPrivacyModal);
