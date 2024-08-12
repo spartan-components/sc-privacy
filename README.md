@@ -28,8 +28,15 @@ import { SCPrivacyModal, SCPrivacyWidget } from '@spartan-components/sc-privacy'
 Include with a script tag:
 
 ```html
-<script type="module" src="./node_modules/@spartan-components/sc-privacy-modal.js">
-<script type="module" src="./node_modules/@spartan-components/sc-privacy-widget.js">
+<script type="module" src="./node_modules/@spartan-components/dist/sc-privacy-modal.js">
+<script type="module" src="./node_modules/@spartan-components/dist/sc-privacy-widget.js">
+```
+
+Or use minified versions:
+
+```html
+<script type="module" src="./node_modules/@spartan-components/dist/sc-privacy-modal.min.js">
+<script type="module" src="./node_modules/@spartan-components/dist/sc-privacy-widget.min.js">
 ```
 
 ### &lt;sc-privacy-modal&gt;
