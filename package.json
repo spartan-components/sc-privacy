@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spartan-components/sp-privacy.git"
+    "url": "git+https://github.com/spartan-components/sc-privacy.git"
   },
   "keywords": [
     "Web",
@@ -22,9 +22,9 @@
   "author": "Spartan Components",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/spartan-components/sp-privacy/issues"
+    "url": "https://github.com/spartan-components/sc-privacy/issues"
   },
-  "homepage": "https://github.com/spartan-components/sp-privacy#readme",
+  "homepage": "https://github.com/spartan-components/sc-privacy#readme",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "@web/dev-server": "^0.4.6",
