@@ -4,7 +4,10 @@
   "description": "A collection of web components to aks for user permission before loading third party code.",
   "main": "index.js",
   "scripts": {
-    "dev": "web-dev-server --open demo --watch"
+    "build": "npm run clean && rollup --config",
+    "clean": "rm -rf ./dist",
+    "dev": "web-dev-server --open demo --watch",
+    "prepublish": "build"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,8 @@
   },
   "homepage": "https://github.com/spartan-components/sp-privacy#readme",
   "devDependencies": {
-    "@web/dev-server": "^0.4.6"
+    "@rollup/plugin-terser": "^0.4.4",
+    "@web/dev-server": "^0.4.6",
+    "rollup": "^4.20.0"
   }
 }
