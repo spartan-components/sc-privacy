@@ -1,6 +1,6 @@
 # &lt;sc-privacy-modal&gt; & &lt;sc-privacy-widget&gt; elements
 
-Two custom elements to ask for user permission before loading third party code like Social Media feeds or maps embeds.
+Two custom elements to ask for user permission before loading third party code via iframe-embeds etc.
 
 **`<sc-privacy-modal>`**
 Modal to ask users for general permission to use any third party tools.
@@ -41,9 +41,14 @@ Or use minified versions:
 
 ### &lt;sc-privacy-modal&gt;
 
+- Use the `data-keys` attribute with **space separated** values to control, which widgets should be loaded.
+- A `<template>` element is expected to render the disclaimer
+- The `<template>` element requires two buttons:
+  - `<button data-ok>`
+  - `<button data-dismiss>`
+
 ```html
-<sc-privacy-modal
-  data-keys="googleMapsCookiesAccepted elfsightCookiesAccepted">
+<sc-privacy-modal data-keys="googleMapsCookiesAccepted elfsightCookiesAccepted">
   <template>
     <p>
       This website uses third party tools that can set cookies and might
@@ -55,14 +60,15 @@ Or use minified versions:
 </sc-privacy-modal>
 ```
 
-Note:
-- Use the `data-keys` attribute with **space separated** values to control, which widgets should be loaded.
-- A `<template>` element is expected to render the disclaimer
-- The `<template>` element requires two buttons:
-  - `<button data-ok>`
-  - `<button data-dismiss>`
-
 ### &lt;sc-privacy-widget&gt;
+
+- Use the `data-key` attribute to control the loading of the widget (only a single value is allowed).
+- You can render a fallback element by specifying the `data-fallback` attribute
+- Two `<template>` elements are required:
+  - `<template data-disclaimer>` for rendering the disclaimer
+  - `<template data-widget>` for rendering the third party embed
+- The `<template data-disclaimer>` element requires one button
+  - `<button data-ok>`
 
 ```html
 <sc-privacy-widget data-key="googleMapsCookiesAccepted">
@@ -95,12 +101,3 @@ Note:
   </template>
 </sc-privacy-widget>
 ```
-
-Notes:
-- Use the `data-key` attribute to control the loading of the widget (only a single value is allowed).
-- You can render a fallback element by specifying the `data-fallback` attribute
-- Two `<template>` elements are required:
-  - `<template data-disclaimer>` for rendering the disclaimer
-  - `<template data-widget>` for rendering the third party embed
-- The `<template data-disclaimer>` element requires one button
-  - `<button data-ok>`
