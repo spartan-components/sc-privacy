@@ -62,7 +62,26 @@ class SCPrivacyWidget extends HTMLElement {
     // save key to localstorage
     // to not show the disclaimer when the page reloads
     localStorage.setItem(this.key, "true");
+    // render the widget
     this.renderWidget();
+    // emit custom event to let other to react to it
+    this.emit('cookiesAccepted', { key: this.key });
+  }
+
+  /**
+   * Function to emit a custom event
+   * @param {string} type The name of the event
+   * @param {object} detail Additional details
+   * @returns {null}
+   */
+  emit(type, detail = {}) {
+    let event = new CustomEvent(`scpw:${type}`, {
+      bubbles: true,
+      cancelable: true,
+      detail: detail,
+    });
+
+    return this.dispatchEvent(event);
   }
 }
 
